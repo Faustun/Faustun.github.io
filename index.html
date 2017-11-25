@@ -44,6 +44,15 @@
             a:hover {
                 color: #f33;
             }
+            #canvas {
+              position: absolute;
+              top: 0;
+              left: 0;
+              z-index: 0;
+              width: 100%;
+              height: 100%;
+              pointer-events: none;
+            }
         </style>
 
         </script>
@@ -55,5 +64,46 @@
             <p><a href="https://github.com/Songzhiguo" target="_blank">Github</a></p>
           </div>
         </div>
+        <canvas id="canvas"></canvas>
+  <script src="./js/fq_canvas.js"></script>
+  <script src="./js/fq_ball.js"></script>
+  <script>
+    const canvas = document.querySelector('#canvas');
+    const ctx = canvas.getContext('2d');
+    let pr = window.devicePixelRatio || 1;
+    let wt = window.innerWidth;
+    let ht = window.innerHeight;
+    
+    let W = canvas.width = wt*pr;
+    let H = canvas.height = ht*pr;
+    
+    const balls = [];
+    
+    for(var i=0; i<300; i++){
+      balls.push(new Ball({
+        x: W * Math.random(),
+        y: H/6 * Math.random(),
+        g: Math.random() * 0.2 + 0.1,
+        f: -(Math.random() * 0.5 + 0.4),
+        r: Math.random() > 0.9 ? Math.random() * 2 + 4 : Math.random() * 2 + 2,
+        fs: `rgb(${~~(55 + 200 * Math.random())},${~~(55 + 200 * Math.random())},${~~(200 + 55 * Math.random())})`
+      }));
+    }
+
+    (function render(){
+      window.requestAnimationFrame(render, canvas);
+      ctx.clearRect(0, 0, W, H);
+      
+      for(let i=0; i<balls.length; i++){
+        balls[i].vy += balls[i].g;
+        balls[i].y += balls[i].vy;
+        if(balls[i].y >= H - balls[i].r){
+          balls[i].y = H - balls[i].r;
+          balls[i].vy *= balls[i].f;
+        }
+        balls[i].render(ctx);
+      }
+    })();
+  </script>
     </body>
 </html>

@@ -21,7 +21,7 @@
               top: 50%;
               left: 50%;
               text-align: center;
-              width: 60px;
+              width: 160px;
               transform: translate(-50%, -50%);
               -webkit-user-select: none;
               -moz-user-select: none;
@@ -56,16 +56,21 @@
               bottom: -114px;
               transform: translateX(-50%);
             }
+            @media (max-width: 992px) {
+              #scratch,
+              #canvas {
+                display: none;
+              }
+            }
         </style>
 
         </script>
     </head>
     <body>
         <div id="wrapper">
-          <div>
-            <p><a href="https://songzhiguo.github.io/blogs/" target="_blank">Blog</a></p>
-            <p><a href="https://github.com/Songzhiguo" target="_blank">Github</a></p>
-          </div>
+          <h2>Song Zhiguo</h2>
+          <p><a href="https://songzhiguo.github.io/blogs/" target="_blank">Blog</a></p>
+          <p><a href="https://github.com/Songzhiguo" target="_blank">Github</a></p>
         </div>
         <canvas id="canvas"></canvas>
         <canvas id="scratch" style="width: 1000px;"></canvas>

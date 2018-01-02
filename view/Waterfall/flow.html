@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
     <title>瀑布流</title>
-    <link rel="stylesheet" href="https://songzhiguo.github.io/lib/css/jquery.mCustomScrollbar.css">
+    <link rel="stylesheet" href="https://songzhiguo.github.io/lib/css/perfect-scrollbar.css">
     <style>
       *{
         margin: 0;
@@ -38,7 +38,7 @@
     </style>
   </head>
   <body>
-    <ul class="mCustomScrollbar">
+    <ul id="container" class="mCustomScrollbar">
         <li>
           <!-- <div class="pic">
             <img src="http:\/\/www.wookmark.com\/images\/original\/638518_wookmark.jpg">
@@ -65,7 +65,7 @@
     </ul>
   
   <script src="https://songzhiguo.github.io/lib/js/jquery-3.2.1.min.js" charset="utf-8"></script>
-  <script src="https://songzhiguo.github.io/lib/js/jquery.mCustomScrollbar.min.js"></script>
+  <script src="https://songzhiguo.github.io/lib/js/perfect-scrollbar.min.js"></script>
   <script type="text/javascript">
     const w = 236; //一个盒子的宽度
     let num = 0;
@@ -125,7 +125,7 @@
       return li;
     }
     
-    
+    var ps = new PerfectScrollbar('#container');
     
   </script>
   </body>

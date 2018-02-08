@@ -4,6 +4,8 @@
     main,footer {
         z-index: 800;
         margin-left: 205px;
+        background: url(//webapp.didistatic.com/static/webapp/shield/cube-ui-home-index-background.png) no-repeat fixed 50%;
+        background-size: cover;
     }
     header {
         width: 205px;

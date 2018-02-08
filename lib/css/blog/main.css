@@ -7,11 +7,14 @@
     }
     header {
         width: 205px;
-        /* padding: 90px 0 0 60px; */
+        padding: 90px 0 0 60px;
         position: fixed;
         top: 0px;
         left: 0px;
         bottom: 0px;
         background-color: #161616;
+    }
+    header .container {
+
     }
 }

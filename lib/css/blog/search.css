@@ -87,7 +87,7 @@
   border-bottom: 1px dashed #f00;
   font-size: 14px;
   font-weight: bold;
-  color: #f00;
+  color: #f00 !important;
 }
 @media (max-width: 767px){
   .popup {

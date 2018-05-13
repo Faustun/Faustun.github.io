@@ -53,6 +53,9 @@
   text-transform: uppercase;
   cursor: pointer;
 }
+.popup-btn-close:before {
+  content: "\f00d";
+}
 #site_search {
   height: 100%;
 }

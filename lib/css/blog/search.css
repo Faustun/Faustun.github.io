@@ -100,3 +100,7 @@
     border-radius: 0px;
   }
 }
+
+.fa-about:before {
+  content: "\f007";
+}

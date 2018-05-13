@@ -103,7 +103,12 @@
     border-radius: 0px;
   }
 }
-
+@media screen and (min-width: 960px){
+  header nav a {
+    height: 42px;
+    line-height: 42px;
+  }
+}
 .fa {
   width: 24px;
   text-align: center;

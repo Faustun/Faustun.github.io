@@ -101,6 +101,10 @@
   }
 }
 
+.fa {
+  width: 24px;
+  text-align: center;
+}
 .fa-about:before {
   content: "\f007";
 }
